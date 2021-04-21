@@ -1,0 +1,84 @@
+ .flex {
+     display: flex;
+ }
+
+ * {
+     text-decoration: none;
+     color: rgb(19, 40, 68);
+ }
+
+ body {
+     background: url(../img/bg.png) no-repeat center center / cover;
+     background-attachment: fixed;
+ }
+
+ .head,
+ .footer20 {
+     flex-grow: 1;
+     justify-content: center;
+ }
+
+ .header,
+ .sidebar,
+ .content,
+ .footer {
+     align-items: center;
+     background: rgba(255, 255, 255, 0.425);
+     border-radius: 10px;
+     padding: 20px;
+ }
+
+ .header {
+     grid-area: header;
+ }
+
+ .sidebar {
+     grid-area: sidebar;
+     justify-content: space-between;
+ }
+
+ .content {
+     grid-area: content;
+ }
+
+ .footer {
+     grid-area: footer;
+ }
+
+ .container {
+     display: grid;
+     grid-template-columns: .5fr 1fr 1fr 1fr;
+     grid-template-rows: auto;
+     grid-gap: 5px 5px;
+     justify-content: space-between;
+     align-content: center;
+     grid-template-areas:
+         "header header header header"
+         "sidebar content content content"
+         "footer footer footer footer"
+     ;
+ }
+
+ .sidebar,
+ .sidebar10,
+ .content,
+ .footer10 {
+     flex-direction: column;
+ }
+
+ .sidebar10 {
+     align-items: center;
+ }
+
+ .img {
+     border-radius: 10px;
+ }
+
+ .contentP {
+    text-align: center;
+    max-width: 700px;
+ }
+
+ .footer20P {
+     font-size: xx-large;
+ }
